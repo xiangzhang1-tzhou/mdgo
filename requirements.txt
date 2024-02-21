@@ -13,4 +13,5 @@ sphinx_rtd_theme
 sphinx-autodoc-typehints
 statsmodels
 tqdm
-LigParGen
+rdkit
+openbabel-wheel
