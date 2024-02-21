@@ -51,10 +51,16 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
           pip install -e .
-      - name: Install dependency BOSS
-        run: |
-          git clone https://github.com/xiangzhang1-tzhou/boss ${GITHUB_WORKSPACE}/boss
-          echo "BOSSdir=${GITHUB_WORKSPACE}/boss" >> $GITHUB_ENV
+
+      - name: Checkout BOSS repo
+        uses: actions/checkout@v4
+        with:
+          repository: xiangzhang1-tzhou/boss
+          path: $GITHUB_WORKSPACE/boss
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Export BOSSdir
+        run: echo "BOSSdir=$GITHUB_WORKSPACE/boss" >> $GITHUB_ENV
+
       - name: Prepare Packmol
         run: |
           echo $HOME
