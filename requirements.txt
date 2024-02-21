@@ -1,5 +1,5 @@
 matplotlib
-MDAnalysis>=2.2.0
+MDAnalysis
 numpy>=1.16.0
 pandas
 monty
