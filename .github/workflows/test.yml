@@ -51,7 +51,7 @@ jobs:
         with:
           repository: xiangzhang1-tzhou/boss
           path: $GITHUB_WORKSPACE/boss
-          # token: ${{ secrets.BOSS_PAT }}
+          token: ${{ secrets.BOSS_PAT }}
       - name: Export BOSSdir
         run: echo "BOSSdir=$GITHUB_WORKSPACE/boss" >> $GITHUB_ENV
 
